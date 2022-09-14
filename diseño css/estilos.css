@@ -1,0 +1,599 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*<------ INTRODUZCO FUENTES -------------->*/
+@font-face{
+    font-family: "Staatliches-Regular (principal)";
+    src: url(../assets/Fuentes/Staatliches-Regular\ \(Principal\).ttf);
+}
+
+@font-face{
+    font-family: "Quicksand-Variable (titulos)";
+    src: url(../assets/Fuentes/Quicksand-Variable\ \(Titulos\).ttf);
+}
+
+@font-face{
+    font-family: "Playfair (Texto)";
+    src: url(../assets/Fuentes/PlayfairDisplay-Variable\ \(Texto\).ttf);
+}
+
+/*<------ ETIQUETAS GENERALES --------->*/
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1{
+    Font-family: "Staatliches-Regular (principal)";
+    
+}
+
+h2, h3, h4{
+    font-family: "Quicksand-Variable (titulos)";
+    
+}
+ h5, h6{
+    font-family: "Playfair (Texto)";
+    
+}
+
+body{
+    background-color: darkcyan;
+    width: 100%;
+}
+
+/*<------ ETIQUETAS DE GRID --------->*/
+
+.contenedor{  
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1.fr 1.5fr 0.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "main main"
+      "footer footer ";
+  }
+  
+  .header { grid-area: header; }
+  
+  .footer { grid-area: footer; }
+  
+  .aside2 { grid-area: aside2; }
+  
+  .aside1 { grid-area: aside1; }
+  
+  .main { grid-area: main; }
+  
+
+.contenedor-equipo {  display: grid;
+    grid-template-columns: 0.3fr 1.2fr 0.3fr; 
+    grid-template-rows: 0.2fr 6fr 0.2fr; 
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "aside1-equipo main-equipo aside2-equipo"
+      "footer footer footer";
+}
+  
+.header { grid-area: header; 
+}
+  
+.aside1-equipo { grid-area: aside1-equipo; 
+}
+  
+.aside2-equipo { grid-area: aside2-equipo; 
+}
+  
+.main-equipo { grid-area: main-equipo; 
+}
+  
+.footer { grid-area: footer; 
+}
+
+.contenedor-servicios {  display: grid;
+    grid-template-columns: 0.3fr 1.2fr 0.3fr;
+    grid-template-rows: 0.2fr 3fr 0.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "aside1-servicios main-servicios aside2-servicios"
+      "footer footer footer";
+  }
+  
+  .header { grid-area: header; }
+  
+  .aside1-servicios { grid-area: aside1-servicios; }
+  
+  .aside2-servicios { grid-area: aside2-servicios; }
+  
+  .main-servicios { grid-area: main-servicios; }
+  
+  .footer { grid-area: footer; }
+  
+
+.contenedor-servicios {  display: grid;
+    grid-template-columns: 0.3fr 1.2fr 0.3fr;
+    grid-template-rows: 0.2fr 1fr 0.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "aside1-servicios main-servicios aside2-servicios"
+      "footer footer footer";
+  }
+  
+  .header { grid-area: header; }
+  
+  .aside1-servicios { grid-area: aside1-servicios; }
+  
+  .aside2-servicios { grid-area: aside2-servicios; }
+  
+  .main-servicios { grid-area: main-servicios; }
+  
+  .footer { grid-area: footer; }
+  
+
+.contenedor-contacto {  display: grid;
+    grid-template-columns: 0.3fr 1.2fr 0.3fr;
+    grid-template-rows: 0.2fr 1.7fr 0.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "aside1-contacto main-contacto aside2-contacto"
+      "footer footer footer";
+}
+  
+  .header { grid-area: header; }
+  
+  .aside1-contacto { grid-area: aside1-contacto; }
+  
+  .aside2-contacto { grid-area: aside2-contacto; }
+  
+  .main-contacto { grid-area: main-contacto; }
+  
+  .footer { grid-area: footer; }
+
+
+.contenedor-nosotros {  display: grid;
+    grid-template-columns: 0.3fr 1.2fr 0.3fr;
+    grid-template-rows: 0.2fr 1.7fr 0.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "aside1-nosotros main-nosotros aside2-nosotros"
+      "footer footer footer";
+  }
+  
+  .header { grid-area: header; }
+  
+  .aside1-nosotros { grid-area: aside1-nosotros; }
+  
+  .aside2-nosotros { grid-area: aside2-nosotros; }
+  
+  .main-nosotros { grid-area: main-nosotros; }
+  
+  .footer { grid-area: footer; }
+  
+  
+/*<------ INDEX ETIQUETAS --------->*/
+
+ /*<-------------------------------------------------------------------------- HEADER---------------------------->*/
+
+.header{
+    display: flex;
+    flex-direction: column;
+    background-image:url(../assets/fondos/fondo\ navegacion.jpg);
+    align-items: center;
+    height: fit-content;
+   
+}
+
+.header .logo-titulo{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between
+}
+
+.header .logo-titulo a{
+    text-decoration: none;
+}
+
+.header .logo-titulo .titulo-principal{
+    color: black;
+    font-size: 1.38rem;
+    display: flex;
+    align-items: center;
+    padding-top: 0.4rem;
+    margin-left: 4rem;
+    
+}
+.header .logo-titulo .titulo-principal h2{
+    padding-left: 0.6rem;
+    padding-top: 1.2rem;
+    font-size: 1rem;
+    
+    
+
+}
+
+.header .logo-titulo .menu-principal{
+
+}
+
+.header .logo-titulo .menu-principal ul{
+    display: flex;
+    margin-right: 5rem;
+   
+}
+
+.header .logo-titulo .menu-principal ul li{
+    font-size: 1.4rem;
+    list-style-type: none;
+    padding: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    transition: all 0.5s;
+    
+    
+}
+
+.header .logo-titulo .menu-principal ul li:hover{
+    
+    opacity: 0.3;
+    transform: scale(1.1);
+
+}
+
+.header .logo-titulo .menu-principal ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.header .barra-separadora{
+    width: 100vw;
+    height: 20px;
+    background-image: url(../assets/recursos/Barra\ 2.0.png);
+    position: relative;
+    bottom: 0;
+}
+
+/*<-------------------------------------------------MAIN---------------------------->*/
+
+.main{
+    width: 100vw;
+    height: 100%;
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+
+
+    
+}
+
+.foto1{
+    width: 50vw;
+    height: 42.5vh;
+    
+}
+
+.foto2{
+   width: 50vw;
+   height: 42.5vh;
+
+}
+.logo{
+    position: absolute;
+    top: 38.8%;
+    left: 44%;
+}
+/*<------------------------------------------------------------------------FOOTER---------------------------->*/
+
+.footer {
+    background-image: url(../assets/fondos/fondo\ navegacion.jpg);
+    opacity: 0,9;
+    display: flex;
+}
+
+.footer .contenedor-social{
+    height: 2.7rem;
+    transition: all 0,4s;
+}
+
+
+.footer .contenedor-social .menu-social{
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.footer .contenedor-social ul li{
+    
+    list-style-type: none;
+    border-radius: 20px;
+    margin:5px;
+    width: 4.2rem;
+    height: 2rem;
+    text-align: center;
+    
+}
+.footer .contenedor-social ul li .fa-brands{
+    position: relative;
+    top: 0.5rem;
+}
+
+.footer .contenedor-social ul div5 h5{
+    text-align: center;
+    display: none;
+}
+
+.footer .contenedor-social ul li:hover{
+    box-shadow:  2px 2px 30px black;
+}
+
+.fa-angle-up{
+    padding-left: 10px; 
+    font-size:1.5rem;
+    cursor:pointer;
+    transition: all 0.4s; 
+    transform: rotate(180deg);
+}
+
+
+
+#play-boton{
+    
+}
+
+#play-boton:checked~.fa-angle-up{
+    
+    transform: rotate(0deg);
+    
+}
+
+#play-boton:checked ~ .contenedor-social{
+    
+    transform: translateY(100px);
+
+}
+
+
+/*<------ INDEX ETIQUETAS--FIN----------->*/
+
+/*<------ NOSOTROS ETIQUETAS --------->*/
+
+/*<-------------------------------------------------------------------------- ASIDES---------------------------->*/
+
+.aside1-equipo{
+    background-image: url(../assets/fondos/Esquina.jpeg);
+    background-size: cover;
+}
+.aside2-equipo{
+    background-image: url(../assets/fondos/Esquina.jpeg);
+    background-size: cover;
+}
+
+/*<-------------------------------------------------------------------------- MAIN---------------------------->*/
+
+.main-equipo{
+    background-color: #2c2d2d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.main-equipo .titulo-equipo{
+margin-top: 5rem;
+margin-bottom: 5rem;
+color:#dee2e3;
+font-size: 1.2rem;
+}
+
+.main-equipo .fotos-equipo{
+    width: 40rem;
+    background-image: url(../assets/fondos/fondo\ navegacion.jpg);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    border-radius: 20px;
+    padding: 2rem;
+    
+}
+
+.main-equipo .fotos-equipo .fotoynombre{
+    text-align: center;
+    
+}
+
+.main-equipo .fotos-equipo .fotoynombre img{
+    border-radius: 10px;
+    
+}
+
+.main-equipo .titulo-cliente{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    color:#dee2e3;
+    font-size: 1.2rem;
+}
+
+
+
+.main-equipo .fotos-cliente{
+    width: 40rem;
+    background-image: url(../assets/fondos/fondo\ navegacion.jpg);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    border-radius: 20px;
+    padding: 2rem;
+    align-items: center;
+}
+
+/*<------ NOSOTROS ETIQUETAS--FIN----------->*/
+
+/*<------ SERVICIOS ETIQUETAS --------->*/
+
+/*<-------------------------------------------------------------------------- ASIDES---------------------------->*/
+
+.aside1-servicios{
+    background-image: url(../assets/fondos/Esquina.jpeg);
+    background-size: cover;
+}
+.aside2-servicios{
+    background-image: url(../assets/fondos/Esquina.jpeg);
+    background-size: cover;
+}
+
+/*<-------------------------------------------------------------------------- MAIN---------------------------->*/
+
+.main-servicios{
+    background-color: #2c2d2d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.main-servicios .titulo-servicios{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    color:#dee2e3;
+    font-size: 1.2rem;
+}
+
+.main-servicios .caja-servicios{
+display: flex;
+flex-direction: column;
+background-image: url(../assets/fondos/fondo\ navegacion.jpg);
+padding: 1.5rem;
+border-radius: 20px;
+border: #1c1d1d solid 7px;
+}
+.main-servicios .caja-servicios .subtitulo-1{
+    color:#2c2d2d;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    
+    
+}
+
+.main-servicios .caja-servicios .imagenes-1{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.main-servicios .caja-servicios .subtitulo-2{
+    color:#2c2d2d;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+}
+
+.main-servicios .caja-servicios .imagenes-2{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-servicios .titulo-backstage{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    color:#dee2e3;
+    font-size: 1.2rem;
+}
+
+.main-servicios .caja-backstage{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../assets/fondos/fondo\ navegacion.jpg);
+    padding: 1rem;
+    border-radius: 20px;
+    border: #1c1d1d solid 7px;
+    margin-bottom: 3rem;
+    width: 91%;
+}
+
+.main-servicios .caja-backstage .galeria-backstage1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around ;
+    width: 100%;
+
+}
+
+/*<------ CONTACTO ETIQUETAS --------->*/
+
+/*<-------------------------------------------------------------------------- ASIDES---------------------------->*/
+
+.aside1-contacto{
+    background-image: url(../assets/fondos/Esquina.jpeg);
+    background-size: cover;
+}
+.aside2-contacto{
+    background-image: url(../assets/fondos/Esquina.jpeg);
+    background-size: cover;
+}
+
+/*<-------------------------------------------------------------------------- MAIN---------------------------->*/
+
+.main-contacto{
+    background-color: #2c2d2d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+/*<------ NOSOTROS ETIQUETAS --------->*/
+
+/*<-------------------------------------------------------------------------- ASIDES---------------------------->*/
+
+.aside1-nosotros{
+    background-image: url(../assets/fondos/Esquina.jpeg);
+    background-size: cover;
+}
+.aside2-nosotros{
+    background-image: url(../assets/fondos/Esquina.jpeg);
+    background-size: cover;
+}
+
+/*<-------------------------------------------------------------------------- MAIN---------------------------->*/
+
+.main-nosotros{
+    background-color: #2c2d2d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
