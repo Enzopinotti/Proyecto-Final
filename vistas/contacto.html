@@ -50,59 +50,44 @@
         <aside2 class="aside2-contacto">
 
         </aside2>
-        <main class="main-contacto">
-            <section class="titulo-contacto">
-                <h4>Contacto</h4>
-            </section>
-            <section class="formulario-caja">
-                <form action="" class="formulario">
-                    <fieldset style="padding: 20px;">
-                        <legend style="font-size: 1.1rem;"> <strong> Dejanos tus datos y te contactaremos!!</strong></legend>
-                        <br>
-                        <div>
-                            <label for="name">Nombre</label>
-                            <input type="text" name="name" placeholder="Juan">
-                        </div>
-                        <br>
-                        <div>
-                            <label for="apellido">Apellido</label>
-                            <input type="text" name="apellido" placeholder="Perez">
-                        </div>
-                        <br>
-                        <div>
-                            <label for="email">Escribe tu email *</label>
-                            <input type="email" name="email" required>
-                        </div>
-                        <br>
-                        <div>
-                            <label for="nac">Elige tu país</label>
-                            <select name="nac" id="">
-                                <option value="arg">Argentina</option>
-                                <option value="uy">Uruguay</option>
-                                <option value="cl">Chile</option>
-                                <option value="per">Perú</option>
-                            </select>
-                        </div>
-                        <br>
-                        <div>
-                            <label for="comentarios">Escribe tu consulta</label><br>
-                            <textarea name="comentarios" id="" cols="30" rows="10"></textarea>
-                        </div>
-                        <br>
-                        <div>
-                            <label for="terminos">Acepta términos y condiciones</label>
-                            <input type="checkbox" name="terminos" value="1">
-                        </div>
-                        <div>
-                            <br>
-                            <input type="submit" value="Enviar datos">
-                            <input type="reset" value="Borrar datos"> 
-                        </div>
-                    </fieldset>
-        
+        <main class="contactos_main" data-aos="fade-up"    data-aos-anchor-placement="top-bottom" data-aos-once="true">
+            <section class="caja-contacto">
+                <div class="contactos_main_titulo">
+                <h1>Contáctanos</h1>
+                </div>
+                <div class="contactos_main_txt">   
+                <p>Déjanos tus datos y consulta.<br>
+                Nos estaremos comunicando lo mas pronto posible con usted...</p>
+                </div>
+                <!-- Comienzo de formulario -->
+                <form class="formulario" action="" method="get" enctype="text/plain">
+                    <div> 
+                        <label for="userName">Nombre</label>
+                        <input type="text" name="userName" id="userName" class="field" required>
+                    </div>
+                    <div>
+                        <label for="userSurname">Apellido</label>
+                        <input type="text" name="userSurname" id="userSurname" class="field" required>                      
+                    </div>
+                    <div>
+                        <label for="userMail">Email</label>
+                        <input type="email" name="userMail" id="userMail" class="field" required >
+                    </div>                                         
+                    <div>
+                    <label class="newslatter_txt" for="newslatter">¿Desea suscribirse a nuestro Newslatter?</label> 
+                    <input type="checkbox" name="newslatter" id="newslatter">
+                    </div>
+                    <div>
+                    <label for="consultas">Consulta</label>
+                    </div>
+                    <div>
+                    <textarea name="consultas" id="consultas" cols="20" rows="10" placeholder="Escribe tu consulta aquí..." class="field" maxlength="400" required></textarea>
+                    </div>
+                    <input type="submit" value="ENVIAR" class="form_boton">                                                      
                 </form>
+                <!-- Fin de formulario -->
             </section>
-        </main>
+    </main>
         <footer class="footer">
             <section class="contenedor-social">
                 <ul class="menu-social">
